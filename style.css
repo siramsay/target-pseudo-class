@@ -1,0 +1,92 @@
+:root {
+
+
+  /*
+    https://medium.com/@adrjohnston/native-css-mixins-ee2a50e07b54
+    color: #f5f5f5;*/
+}
+
+
+
+/* reset
+* {
+  margin: 0;
+}
+*/
+
+/* Make box-sing default to border-box */
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+iframe {
+  /*box-sizing: border-box;*/
+  width: 100%;
+  padding: 1em;
+  border: 1px solid #000000;
+  display: flex;
+}
+
+main > * + * {
+  margin-top: 2rem;
+}
+
+/*
+@media query orirentation : potrait or landscape;
+ */
+
+html:not([lang]),
+html[lang=""] {
+  border-top: 20px solid red;
+}
+
+html:not([lang]),html[lang=""] { border-top: 20px solid red; }
+img:not([alt]),img[alt=""] { border: 5px dashed red; }
+canvas:not([role]),canvas:not([aria-label]),canvas[role=""],canvas[aria-label=""] { border: 5px dashed red; }
+
+
+/*
+html
+moz-osx-font-smoothing: auto;
+
+body
+font-variant-ligatures: normal;
+font-kerning: normal;
+*/
+
+
+body {
+  margin: 0;
+}
+
+
+
+main {
+  width: 70ch;
+  /*min-height: 100vh;*/
+  margin: 40px auto;
+
+  /* display: flex;
+     justify-content: center;
+     align-items: center;
+
+   */
+  overflow: hidden;
+}
+
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/:target */
+
+[id^="anchor-"]:target {
+  color: red;
+  /*scroll-padding-top: unset;*/
+}
